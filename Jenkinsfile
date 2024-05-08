@@ -15,7 +15,7 @@ pipeline {
 
     stage('Building Stage') {
       steps {
-        dotnetRestore(project: 'Wisej.DemoBrowser.sln', force: true, noCache: true)
+        dotnetRestore(project: 'Wisej.DemoBrowser.sln')
         dotnetBuild(project: 'Wisej.DemoBrowser.sln', force: true, continueOnError: true)
       }
     }
